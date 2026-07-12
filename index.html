@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SafeSamas | Protegendo o que é seu</title>
     
-    <link rel="icon" href="assets/logo.png" type="image/png">
+    <!-- Favicon utilizando o Escudo -->
+    <link rel="icon" href="assets/escudo.png" type="image/png">
     
     <link rel="stylesheet" href="css/safe.css">
 </head>
 <body>
 
     <header class="safe-header">
-        <div class="container-header">
-            <img src="assets/logo.png" class="safe-logo" alt="Logo SafeSamas">
+        <!-- Lado Esquerdo: Logo oficial (Escudo) e Nome -->
+        <a href="index.html" class="container-header" style="text-decoration:none;">
+            <img src="assets/escudo.png" class="safe-logo" alt="Logo SafeSamas">
             <span>SafeSamas</span>
-        </div>
+        </a>
+
+        <!-- Lado Direito: Botão de acesso (Escudo) -->
+        <a href="login.html">
+            <img src="assets/escudo.png" class="btn-header-right" alt="Minha Conta">
+        </a>
     </header>
 
     <main class="container">
@@ -24,65 +31,31 @@
             Se tem valor para você, merece ser encontrado.
         </p>
 
+        <!-- Seção de Módulos -->
         <section class="modulos" id="modulos">
             <h2>O que você deseja encontrar novamente?</h2>
-
             <div class="cards">
-                <div class="card" id="card-animal">
+                <div class="card" id="card-animal" onclick="window.location.href='PetSamas/index.html'">
                     <span>🐶</span>
                     <h3>Animal</h3>
                     <p>Cadastre e proteja seu pet.</p>
                     <p class="status disponivel">🟢 Disponível</p>
                 </div>
-
-                <div class="card" id="card-veiculo">
-                    <span>🚗</span>
-                    <h3>Veículo</h3>
-                    <p>Proteja seu veículo.</p>
-                    <p class="status breve">🚧 Em breve</p>
-                </div>
-
-                <div class="card" id="card-phone">
-                    <span>📱</span>
-                    <h3>Celular</h3>
-                    <p>Proteja seu aparelho.</p>
-                    <p class="status breve">🚧 Em breve</p>
-                </div>
-
-                <div class="card" id="card-mochila">
-                    <span>🎒</span>
-                    <h3>Mochila</h3>
-                    <p>Recupere facilmente.</p>
-                    <p class="status breve">🚧 Em breve</p>
-                </div>
-
-                <div class="card" id="card-outros">
-                    <span>📦</span>
-                    <h3>Outros</h3>
-                    <p>Cadastre qualquer outro item de valor.</p>
-                    <p class="status desenvolvimento">🟡 Em desenvolvimento</p>
-                </div>
+                <!-- Outros cards permanecem iguais -->
+                <div class="card" id="card-veiculo"><span>🚗</span><h3>Veículo</h3><p>Proteja seu veículo.</p><p class="status breve">🚧 Em breve</p></div>
+                <div class="card" id="card-phone"><span>📱</span><h3>Celular</h3><p>Proteja seu aparelho.</p><p class="status breve">🚧 Em breve</p></div>
+                <div class="card" id="card-mochila"><span>🎒</span><h3>Mochila</h3><p>Recupere facilmente.</p><p class="status breve">🚧 Em breve</p></div>
+                <div class="card" id="card-outros"><span>📦</span><h3>Outros</h3><p>Cadastre qualquer outro item de valor.</p><p class="status desenvolvimento">🟡 Em desenvolvimento</p></div>
             </div>
         </section>
 
+        <!-- Seção de Diferenciais -->
         <section class="diferenciais">
             <h2>Por que escolher o SafeSamas?</h2>
             <div class="cards">
-                <div class="diferencial">
-                    <span>🛡️</span>
-                    <h3>Segurança</h3>
-                    <p>Seus dados permanecem protegidos. Compartilhamos apenas o necessário para facilitar o reencontro.</p>
-                </div>
-                <div class="diferencial">
-                    <span>⚡</span>
-                    <h3>Rapidez</h3>
-                    <p>Quem encontra o item acessa imediatamente a plataforma através do QR Code.</p>
-                </div>
-                <div class="diferencial">
-                    <span>🌎</span>
-                    <h3>Disponível em qualquer lugar</h3>
-                    <p>Basta um celular com acesso à internet para iniciar o processo de devolução.</p>
-                </div>
+                <div class="diferencial"><span>🛡️</span><h3>Segurança</h3><p>Seus dados permanecem protegidos.</p></div>
+                <div class="diferencial"><span>⚡</span><h3>Rapidez</h3><p>Quem encontra o item acessa imediatamente.</p></div>
+                <div class="diferencial"><span>🌎</span><h3>Disponível em qualquer lugar</h3><p>Basta um celular.</p></div>
             </div>
         </section>
     </main>
