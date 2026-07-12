@@ -9,20 +9,13 @@ SafeSamas - DNA Visual da Plataforma (safe.css)
 
 body { 
     font-family: Arial, Helvetica, sans-serif; 
-    background-color: #f4f7f6; /* Fundo base */
-    /* Marca-d'água do escudo (ajustada para ser suave) */
-    background-image: url("../assets/escudo.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 420px;
-    background-attachment: fixed;
-    /* Filtro para transformar o escudo em marca-d'água */
-    filter: none; /* Mantém o conteúdo legível */
-    background-blend-mode: multiply; 
-    opacity: 1; 
+    /* Cor de fundo fundida com o novo escudo */
+    background-color: #d7dee3; 
+    min-height: 100vh;
+    color: #1d2939; 
 }
 
-/* Aplicando opacidade apenas no background via pseudo-elemento ou filtro visual simples */
+/* Marca-d'água do escudo (fusão conceitual) */
 body::before {
     content: "";
     position: fixed;
@@ -32,16 +25,16 @@ body::before {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 420px;
-    opacity: 0.1; /* Escudo muito suave (marca-d'água) */
-    pointer-events: none; /* Permite clicar no conteúdo */
+    opacity: 1; /* Como a cor de fundo combina com a imagem, não precisamos mais de opacidade baixa */
+    pointer-events: none; 
     z-index: -1;
 }
 
 /* 2. CABEÇALHO GLOBAL (Para ser usado em todos os módulos) */
 .safe-header {
     padding: 20px;
-    border-bottom: 1px solid #ddd;
-    background-color: #f8f9fa;
+    border-bottom: 1px solid #c5cdd2; /* Ajuste sutil na borda para combinar com o novo fundo */
+    background-color: #e5ebef; /* Leve variação para dar profundidade ao header */
     margin-bottom: 20px;
 }
 
