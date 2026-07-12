@@ -1,6 +1,6 @@
 /*
 ==========================================================
-PetSamas - Arquivo: style.css
+PetSamas - Arquivo: style.css (Completo)
 ==========================================================
 */
 
@@ -15,7 +15,7 @@ PetSamas - Arquivo: style.css
 .safe-header .voltar {
     display: inline-flex;
     align-items: center;
-    gap: 10px; /* Espaço entre a logo e o texto */
+    gap: 10px;
     text-decoration: none;
     font-weight: bold;
     color: #333;
@@ -29,21 +29,17 @@ PetSamas - Arquivo: style.css
     transform: scale(1.02);
 }
 
-.safe-header .logo-safe {
-    width: 30px; /* Tamanho ajustado para o cabeçalho */
+.safe-header .safe-logo {
+    width: 40px; 
     height: auto;
 }
 
 /* 2. ESTILOS GERAIS */
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f7f6; /* Fundo neutro padronizado */
+    background-color: #f4f7f6;
     color: #222;
     min-height: 100vh;
 }
@@ -60,12 +56,8 @@ body {
 }
 
 /* 3. IMAGENS E TIPOGRAFIA */
-#logo { width: 140px; max-width: 100%; margin-bottom: 20px; }
-
 img { max-width: 100%; height: auto; }
-
 h1 { font-size: 40px; margin-bottom: 10px; }
-
 .subtitulo { color: #666; margin-bottom: 30px; font-size: 18px; }
 
 /* 4. FORMULÁRIOS E BOTÕES */
@@ -76,23 +68,31 @@ button {
 }
 button:hover { transform: scale(1.02); }
 
+/* Estilização dos inputs que você mencionou */
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+input[type="tel"] {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #25D366;
+    box-shadow: 0 0 8px rgba(37, 211, 102, 0.2);
+}
+
 a { text-decoration: none; }
 
-/* 5. RESPONSIVIDADE E UTILITÁRIOS */
+/* 5. RESPONSIVIDADE */
 @media (max-width: 600px) {
     .container { padding: 25px; }
     h1 { font-size: 32px; }
     button { font-size: 16px; }
-}
-
-/* MODAL DE QR CODE */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,.6);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
 }
