@@ -9,13 +9,14 @@ SafeSamas - DNA Visual da Plataforma (safe.css)
 
 body { 
     font-family: Arial, Helvetica, sans-serif; 
-    /* Cor de fundo fundida com o novo escudo */
-    background-color: #d7dee3; 
+    /* Fundo branco puro para fusão total */
+    background-color: #ffffff; 
     min-height: 100vh;
-    color: #1d2939; 
+    /* Texto escuro para alto contraste no fundo branco */
+    color: #123A63; 
 }
 
-/* Marca-d'água do escudo (fusão conceitual) */
+/* Marca-d'água do escudo (fusão conceitual com fundo branco) */
 body::before {
     content: "";
     position: fixed;
@@ -25,16 +26,16 @@ body::before {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 420px;
-    opacity: 1; /* Como a cor de fundo combina com a imagem, não precisamos mais de opacidade baixa */
+    opacity: 1; 
     pointer-events: none; 
     z-index: -1;
 }
 
-/* 2. CABEÇALHO GLOBAL (Para ser usado em todos os módulos) */
+/* 2. CABEÇALHO GLOBAL */
 .safe-header {
     padding: 20px;
-    border-bottom: 1px solid #c5cdd2; /* Ajuste sutil na borda para combinar com o novo fundo */
-    background-color: #e5ebef; /* Leve variação para dar profundidade ao header */
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #ffffff; 
     margin-bottom: 20px;
 }
 
@@ -55,27 +56,61 @@ body::before {
 
 .safe-header .voltar:hover { color: #0056b3; }
 
-/* 3. ESTILOS DA PÁGINA INICIAL (Hero, Cards, Diferenciais) */
+/* 3. ESTILOS DA PÁGINA INICIAL */
 html { scroll-behavior: smooth; }
-.container { width:90%; max-width:1200px; margin:auto; text-align: center; padding-top: 50px; position: relative; z-index: 1; }
+.container { 
+    width: 90%; 
+    max-width: 1200px; 
+    margin: auto; 
+    text-align: center; 
+    padding-top: 50px; 
+    position: relative; 
+    z-index: 1; 
+}
 
 .hero-logo { display:flex; flex-direction:column; align-items:center; cursor:pointer; }
-#logoInicio { width:220px; transition:.25s; }
-#logoInicio:hover { transform:scale(1.08); filter:drop-shadow(0 0 20px rgba(22,158,242,.45)); }
 
-h1 { font-size:58px; color:#123A63; margin: 30px 0 20px 0; }
-.subtitulo { font-size:26px; color:#169EF2; font-weight:bold; margin-bottom: 60px; }
+/* Corrige fundo da logo e aplica transparência forçada */
+#logoInicio { 
+    width: 220px; 
+    transition: .25s;
+    background: transparent !important; 
+    overflow: hidden !important;
+}
 
-section { margin-bottom:120px; }
-section h2 { font-size:36px; color:#123A63; margin-bottom:45px; }
+#logoInicio:hover { 
+    transform: scale(1.08); 
+    filter: drop-shadow(0 0 20px rgba(22,158,242,.45)); 
+}
 
-.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:30px; }
-.card { background:white; border-radius:18px; padding:35px; text-align:center; box-shadow:0 8px 30px rgba(0,0,0,.08); transition:.25s; cursor:pointer; }
-.card:hover { transform:translateY(-8px); }
+h1 { font-size: 58px; color: #123A63; margin: 30px 0 20px 0; }
+.subtitulo { font-size: 26px; color: #169EF2; font-weight: bold; margin-bottom: 60px; }
 
-.diferencial { background: white; padding: 40px; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0, 0, 0, .08); }
+section { margin-bottom: 120px; }
+section h2 { font-size: 36px; color: #123A63; margin-bottom: 45px; }
 
-@media(max-width:768px){
-    h1 { font-size:42px; }
-    .subtitulo { font-size:22px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
+.card { 
+    background: white; 
+    border: 1px solid #f0f0f0; /* Borda sutil no fundo branco */
+    border-radius: 18px; 
+    padding: 35px; 
+    text-align: center; 
+    box-shadow: 0 8px 30px rgba(0,0,0,.05); 
+    transition: .25s; 
+    cursor: pointer; 
+}
+.card:hover { transform: translateY(-8px); }
+
+.diferencial { background: white; padding: 40px; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0, 0, 0, .05); }
+
+/* Ajustes gerais de imagem para evitar bordas brancas */
+img {
+    background: transparent !important;
+    overflow: hidden !important;
+}
+
+@media(max-width: 768px){
+    h1 { font-size: 42px; }
+    .subtitulo { font-size: 22px; }
 }
