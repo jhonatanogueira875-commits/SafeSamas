@@ -1,54 +1,69 @@
 /*
 =========================================================
-SafeSamas
-Arquivo: safe.css
+SafeSamas - DNA Visual da Plataforma (safe.css)
 =========================================================
 */
 
-/* Navegação suave */
-html {
-    scroll-behavior: smooth;
+/* 1. ESTRUTURA GLOBAL E IDENTIDADE */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body { 
+    font-family: Arial, Helvetica, sans-serif; 
+    background-color: #f4f7f6; /* Fundo base */
+    /* Marca-d'água do escudo (opcional, você pode ajustar o caminho) */
+    background-image: url("../assets/escudo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 420px;
+    background-attachment: fixed;
+    color: #1d2939; 
+    min-height: 100vh;
 }
 
-/* RESET E BODY */
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:Arial, Helvetica, sans-serif; background:linear-gradient(180deg,#f7fbff,#eef5fb); color:#1d2939; }
+/* 2. CABEÇALHO GLOBAL (Para ser usado em todos os módulos) */
+.safe-header {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f8f9fa;
+    margin-bottom: 20px;
+}
+
+.safe-header .voltar {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.safe-logo {
+    width: 40px;
+    margin-right: 12px;
+}
+
+.safe-header .voltar:hover { color: #0056b3; }
+
+/* 3. ESTILOS DA PÁGINA INICIAL (Hero, Cards, Diferenciais) */
+html { scroll-behavior: smooth; }
 .container { width:90%; max-width:1200px; margin:auto; text-align: center; padding-top: 50px; }
 
-/* HERO LOGO */
 .hero-logo { display:flex; flex-direction:column; align-items:center; cursor:pointer; }
 #logoInicio { width:220px; transition:.25s; }
 #logoInicio:hover { transform:scale(1.08); filter:drop-shadow(0 0 20px rgba(22,158,242,.45)); }
-#logoInicio:active { transform:scale(.96); }
-.clique { margin-top:20px; color:#169EF2; font-weight:bold; font-size:18px; }
 
-/* ESTILOS GERAIS */
 h1 { font-size:58px; color:#123A63; margin: 30px 0 20px 0; }
 .subtitulo { font-size:26px; color:#169EF2; font-weight:bold; margin-bottom: 60px; }
+
 section { margin-bottom:120px; }
 section h2 { font-size:36px; color:#123A63; margin-bottom:45px; }
 
-/* CARDS MÓDULOS */
 .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:30px; }
 .card { background:white; border-radius:18px; padding:35px; text-align:center; box-shadow:0 8px 30px rgba(0,0,0,.08); transition:.25s; cursor:pointer; }
 .card:hover { transform:translateY(-8px); }
-.card span { font-size:55px; }
-.card h3 { margin-top:20px; color:#123A63; }
-.card p { color:#666; line-height:28px; margin-top: 10px; }
 
-/* STATUS */
-.status { margin-top:20px; font-size:14px; font-weight:bold; }
-.disponivel { color:#28a745; }
-.breve { color:#ff9800; }
-
-/* DIFERENCIAIS */
-.diferenciais { margin: 120px 0; }
-.cards-diferenciais { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
-.diferencial { background: white; padding: 40px; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0, 0, 0, .08); transition: .25s; }
-.diferencial:hover { transform: translateY(-8px); }
-.diferencial span { font-size: 55px; }
-.diferencial h3 { margin: 20px 0; color: #123A63; }
-.diferencial p { color: #666; line-height: 30px; }
+.diferencial { background: white; padding: 40px; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0, 0, 0, .08); }
 
 @media(max-width:768px){
     h1 { font-size:42px; }
