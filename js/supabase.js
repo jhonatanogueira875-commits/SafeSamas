@@ -1,25 +1,39 @@
 /*
 ==========================================================
 SafeSamas
-Conexão única com o Supabase
+Arquivo: supabase.js
 
-Todos os módulos utilizam este arquivo.
+Responsável por:
 
-PetSamas
-AutoSamas
-PhoneSamas
-MochilaSamas
-ItemSamas
+✔ Conectar ao Supabase
+✔ Disponibilizar o cliente para toda a plataforma
 ==========================================================
 */
 
-const SUPABASE_URL = "SUA_URL_DO_SUPABASE";
 
-const SUPABASE_ANON_KEY = "SUA_CHAVE_PUBLICA";
+// ======================================================
+// CONFIGURAÇÃO DO SUPABASE
+// ======================================================
 
-const banco = supabase.createClient(
+const SUPABASE_URL =
+"https://zkgasxwggvdamuvxcsnf.supabase.co";
+
+const SUPABASE_ANON_KEY =
+"sb_publishable_NFlKL0lg1JuduUXTEwX9jA_jhxrBUMQ";
+
+
+// ======================================================
+// CRIA O CLIENTE
+// ======================================================
+
+const { createClient } = supabase;
+
+const banco = createClient(
+
     SUPABASE_URL,
+
     SUPABASE_ANON_KEY
+
 );
 
-console.log("☁️ Supabase conectado.");
+console.log("☁️ Cliente Supabase inicializado.");
