@@ -1,98 +1,190 @@
 /*
 ==========================================================
-PetSamas - Arquivo: style.css (Completo)
+PetSamas - Arquivo: style.css
 ==========================================================
 */
 
-/* 1. CABEÇALHO REUTILIZÁVEL */
-.safe-header {
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
-    background-color: #f8f9fa;
-    margin-bottom: 20px;
+/* =======================================================
+   ESTILOS DO MÓDULO PETSAMAS
+======================================================= */
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.safe-header .voltar {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #333;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
+/* CONTAINER */
+
+.container{
+
+    width:92%;
+    max-width:500px;
+
+    margin:40px auto;
+
+    background:rgba(255,255,255,.95);
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+    text-align:center;
+
 }
 
-.safe-header .voltar:hover {
-    color: #0056b3;
-    text-decoration: underline;
-    transform: scale(1.02);
+/* LOGO DO PETSAMAS */
+
+#logo{
+
+    width:170px;
+
+    max-width:100%;
+
+    height:auto;
+
+    margin-bottom:20px;
+
 }
 
-.safe-header .safe-logo {
-    width: 40px; 
-    height: auto;
+/* TIPOGRAFIA */
+
+h1{
+
+    font-size:40px;
+
+    margin-bottom:10px;
+
 }
 
-/* 2. ESTILOS GERAIS */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+.subtitulo{
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f7f6;
-    color: #222;
-    min-height: 100vh;
+    color:#666;
+
+    margin-bottom:30px;
+
+    font-size:18px;
+
 }
 
-.container {
-    width: 92%;
-    max-width: 500px;
-    margin: 40px auto;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 35px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,.2);
-    text-align: center;
+/* BOTÕES */
+
+button{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-top:20px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#25D366;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.2s;
+
 }
 
-/* 3. IMAGENS E TIPOGRAFIA */
-img { max-width: 100%; height: auto; }
-h1 { font-size: 40px; margin-bottom: 10px; }
-.subtitulo { color: #666; margin-bottom: 30px; font-size: 18px; }
+button:hover{
 
-/* 4. FORMULÁRIOS E BOTÕES */
-button {
-    width: 100%; padding: 16px; margin-top: 20px; border: none; border-radius: 12px;
-    background: #25D366; color: white; font-size: 18px; font-weight: bold;
-    cursor: pointer; transition: .2s;
-}
-button:hover { transform: scale(1.02); }
+    transform:scale(1.02);
 
-/* Estilização dos inputs que você mencionou */
-input[type="text"], 
-input[type="email"], 
-input[type="password"], 
-input[type="tel"] {
-    width: 100%;
-    padding: 14px;
-    margin: 10px 0;
-    border: 2px solid #ddd;
-    border-radius: 12px;
-    font-size: 16px;
-    transition: border 0.3s ease;
 }
 
-input:focus {
-    outline: none;
-    border-color: #25D366;
-    box-shadow: 0 0 8px rgba(37, 211, 102, 0.2);
+/* INPUTS */
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=tel]{
+
+    width:100%;
+
+    padding:14px;
+
+    margin:10px 0;
+
+    border:2px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    transition:border .3s;
+
 }
 
-a { text-decoration: none; }
+input:focus{
 
-/* 5. RESPONSIVIDADE */
-@media (max-width: 600px) {
-    .container { padding: 25px; }
-    h1 { font-size: 32px; }
-    button { font-size: 16px; }
+    outline:none;
+
+    border-color:#25D366;
+
+    box-shadow:0 0 8px rgba(37,211,102,.2);
+
+}
+
+/* LINKS */
+
+a{
+
+    text-decoration:none;
+
+}
+
+.rodape-links{
+
+    font-size:14px;
+
+    color:#666;
+
+}
+
+.rodape-links a{
+
+    color:#555;
+
+}
+
+.rodape-links a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* RESPONSIVIDADE */
+
+@media(max-width:600px){
+
+    .container{
+
+        padding:25px;
+
+    }
+
+    h1{
+
+        font-size:32px;
+
+    }
+
+    button{
+
+        font-size:16px;
+
+    }
+
 }
