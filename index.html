@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SafeSamas | Protegendo o que é seu</title>
 
-    <!-- Favicon -->
     <link rel="icon" href="assets/escudo.png" type="image/png">
 
     <link rel="stylesheet" href="css/safe.css">
@@ -14,15 +13,18 @@
 
     <header class="safe-header">
 
-        <!-- Logo da Plataforma -->
         <a href="index.html" class="container-header" style="text-decoration:none;">
             <img src="assets/escudo.png" class="safe-logo" alt="Logo SafeSamas">
             <span>SafeSamas</span>
         </a>
 
-        <!-- Área do Usuário -->
-        <a href="login.html">
-            <img src="assets/escudo.png" class="btn-header-right" alt="Minha Conta">
+        <a href="login.html" 
+           id="btnConta" 
+           title="Entrar">
+            <img src="assets/escudo.png" 
+                 class="btn-header-right" 
+                 alt="Minha Conta" 
+                 id="iconeConta">
         </a>
 
     </header>
@@ -35,7 +37,6 @@
             Se tem valor para você, merece ser encontrado.
         </p>
 
-        <!-- Módulos -->
         <section class="modulos" id="modulos">
 
             <h2>O que você deseja proteger?</h2>
@@ -117,8 +118,6 @@
 
         </section>
 
-        <!-- Diferenciais -->
-
         <section class="diferenciais">
 
             <h2>Por que escolher o SafeSamas?</h2>
@@ -161,6 +160,9 @@
 
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/session.js"></script>
     <script src="js/safe.js"></script>
 
 </body>
