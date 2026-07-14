@@ -7,30 +7,34 @@ Controle de Sessão
 
 document.addEventListener("DOMContentLoaded", async () => {
 
-    const { data, error } = await banco.auth.getSession();
+    const { data, error } = await banco.auth.getUser();
 
     if (error) {
-        console.error("Erro ao recuperar sessão:", error);
+
+        console.error("Erro ao recuperar usuário:", error);
+
         return;
+
     }
 
     const botaoConta = document.getElementById("btnConta");
 
     if (!botaoConta) return;
 
-    if (data.session) {
+    if (data.user) {
 
         console.log("✅ Usuário logado.");
 
-        // Redireciona para o perfil quando estiver pronto
         botaoConta.href = "perfil.html";
+
         botaoConta.title = "Minha Conta";
 
     } else {
 
-        console.log("❌ Nenhum usuário logado.");
+        console.log("❌ Usuário não logado.");
 
         botaoConta.href = "login.html";
+
         botaoConta.title = "Entrar";
 
     }

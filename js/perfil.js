@@ -4,30 +4,31 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     console.log("📌 DOM carregado.");
 
-    // Verifica se o usuário está logado via servidor
     const { data, error } = await banco.auth.getUser();
 
-    // Logs de depuração detalhados
     console.log("Erro:", error);
     console.log("Data:", data);
     console.log("Usuário:", data?.user);
 
+    // TESTE 1: O alerta confirma que o JS alcançou o dado
+    if (data?.user) {
+        alert(data.user.email);
+    }
+
     if (error || !data?.user) {
-        // Se houver erro ou usuário não existir, redireciona para o login
-        console.warn("⚠️ Acesso negado ou sessão inválida. Redirecionando...");
         window.location.href = "login.html";
         return;
     }
 
-    // Preenche os dados do perfil
-    document.getElementById("emailUsuario").textContent = data.user.email;
+    // TESTE 2: Usando innerHTML com estilo forçado para ver se aparece na tela
+    document.getElementById("emailUsuario").innerHTML = 
+        "<h2 style='color:red'>" + data.user.email + "</h2>";
+
     document.getElementById("nomeUsuario").textContent = "Usuário SafeSamas";
 
-    // Configura o botão de logout
-    document.getElementById("btnLogout")
-        .addEventListener("click", async () => {
-            await banco.auth.signOut();
-            window.location.href = "index.html";
-        });
+    document.getElementById("btnLogout").addEventListener("click", async () => {
+        await banco.auth.signOut();
+        window.location.href = "index.html";
+    });
 
 });
